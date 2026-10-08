@@ -37,3 +37,6 @@
 - https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 สถานะ: จัดเตรียมชุดไฟล์สำหรับ GitHub Pages ยังไม่ถือว่าเผยแพร่จนมี repository ปลายทางและผล deployment สำเร็จ
+
+## ชื่อและ QR บนใบประกาศ (8 ตุลาคม 2569)
+เมื่อเรียนและตอบครบ ให้กรอกชื่อในหน้าใบประกาศแล้วกดบันทึกชื่อ ชื่ออยู่เฉพาะ localStorage เครื่องนี้ ไม่ส่งให้โครงการ สามารถพิมพ์/บันทึก PDF ได้ QR เปิด https://anurak1983.github.io/AIP_Learning-hub/ ไม่ใช่การตรวจสอบใบประกาศจากฐานข้อมูลกลาง หากย้าย URL ต้องสร้าง static/learning-hub-qr.svg ใหม่
