@@ -1,0 +1,39 @@
+# Safeguard Learning Hub — GitHub Pages
+
+ฉบับ HTML/CSS/JavaScript สำหรับเรียนรู้ด้วยตนเอง วันที่ 8 ตุลาคม 2569
+
+## ใช้งานได้
+- บทเรียน M1–M5 ภาพขยาย PDF และคำแปลไทย/อังกฤษ
+- แบบทดสอบฝึกทำ 10 ข้อ ตรวจคำตอบในเบราว์เซอร์
+- ความคืบหน้าเก็บใน localStorage ของเบราว์เซอร์เดิม
+- พิมพ์ใบประกาศตัวอย่างหรือบันทึก PDF ผ่านหน้าพิมพ์ของเบราว์เซอร์
+
+## ข้อจำกัดที่ต้องทราบ
+ไม่มีระบบ login ที่ปลอดภัย ไม่มีฐานข้อมูลกลาง ไม่มีการลงทะเบียนชื่อจริง ไม่มีรายงานรวม ไม่มีการตรวจสอบใบประกาศหรือรหัสกลับมาเรียนข้ามเครื่อง เฉลยอยู่ในไฟล์ JavaScript จึงไม่เหมาะกับข้อสอบรับรองผล การล้าง browser data จะลบความคืบหน้า ผู้ใช้เปลี่ยนข้อมูลบนเครื่องตนเองได้ ไฟล์ภาพ/PDF ต้นฉบับเป็นไทย
+
+ไม่ใส่รหัสผู้ตรวจเดิมลง HTML เพราะผู้เข้าชมอ่าน source ได้ เว็บไซต์ต้นฉบับบน Sites ยังคงเดิม รุ่นนี้แยกต่างหากและไม่ส่งข้อมูลกลับระบบเดิม
+
+## เปิดตรวจบนเครื่อง
+แตก ZIP แล้วเปิด index.html ด้วยเบราว์เซอร์ ไม่ต้อง npm install หรือฐานข้อมูล หากเบราว์เซอร์จำกัด localStorage บน file:// ให้ทดลองผ่าน web server เช่น `python -m http.server 8080` แล้วเปิด http://localhost:8080/
+
+## ขึ้น GitHub Pages
+1. เข้าบัญชี GitHub สร้าง repository สำหรับเว็บไซต์ เช่น r4-safeguard-learning โดยตรวจสิทธิ์ใช้งาน GitHub Pages ของบัญชี
+2. แตก ZIP แล้วอัปโหลด **ไฟล์และโฟลเดอร์ภายในชุด** ไปไว้ที่ root ของ repository ให้ index.html อยู่ระดับบนสุด ไม่ใช่อัปโหลด ZIP ทั้งก้อน
+3. เก็บ static/, data.js, pages.js, translations.js, CSS และ .nojekyll ให้ครบ การอัปโหลดโฟลเดอร์ขนาดใหญ่แนะนำใช้ GitHub Desktop หรือ Git
+4. ที่ Settings > Pages เลือก Source: Deploy from a branch แล้วเลือก main และ /(root) กด Save
+5. รอ deployment สำเร็จ แล้วเปิด URL ที่ GitHub แสดง รูปแบบทั่วไป https://ชื่อบัญชี.github.io/ชื่อrepository/
+6. ตรวจรูป PDF ภาษา แบบทดสอบ และใบประกาศบนมือถือก่อนแจก QR
+
+ลิงก์ภายในใช้ relative path และ ?page=M1 จึงรองรับชื่อ repository ที่ต่างกัน โดยไม่ต้องตั้ง base path และไม่ต้องทำ server rewrite
+
+## อัปเดต
+อัปโหลดไฟล์ที่แก้และ commit ใหม่ GitHub Pages จะเผยแพร่ตาม branch ที่ตั้งไว้ ห้ามอัปโหลด .dev.vars token หรือข้อมูลผู้เรียน ชุดนี้ไม่ต้องใช้ secrets
+
+## หากต้องการเก็บผลจริง
+ต้องเชื่อม API/ฐานข้อมูลและระบบยืนยันตัวตนที่โฮสต์แยก แล้วทดสอบสิทธิ์ ความเป็นส่วนตัว และการออกใบประกาศจริงก่อนใช้งาน ไม่สามารถเพิ่มความสามารถเหล่านี้ด้วย HTML อย่างเดียว
+
+## เอกสาร GitHub
+- https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+- https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+สถานะ: จัดเตรียมชุดไฟล์สำหรับ GitHub Pages ยังไม่ถือว่าเผยแพร่จนมี repository ปลายทางและผล deployment สำเร็จ

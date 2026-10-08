@@ -1,0 +1,8 @@
+QA 2026-10-08
+PASS JavaScript syntax check
+PASS all index/embedded lesson image, PDF, CSS and JS file references
+PASS font URLs in CSS and infographic dialog targets
+PASS browser M1 -> M2 -> M3 -> M4 -> M5 -> quiz (10 answers) -> sample certificate
+PASS English quiz display and persisted answers after navigation
+No live GitHub deployment requested. No central storage, secure login or certified certificate.
+Print/PDF export and fresh mobile-device testing not performed in this conversion.
